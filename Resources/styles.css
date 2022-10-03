@@ -137,14 +137,14 @@ header {
 }
 
 #slide-1 {
-    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/starrycamp.jpeg");
+    background-image: url("images/starrycamp.jpeg");
 }
 
 #slide-2 {
-    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/Camp.jpeg");
+    background-image: url("images/Camp.jpeg");
 }
 #slide-3 {
-    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/river.jpeg");
+    background-image: url("images/river.jpeg");
 }
 
 /* Pick Your Plan*/
@@ -170,7 +170,7 @@ header {
     bottom: 0px;
     left: 0px;
     opacity: 0.3;
-    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/camppattern.jpeg");
+    background-image: url("images/camppattern.jpeg");
     width: 100%;
     height: 10rem;
 }
@@ -195,7 +195,7 @@ header {
 }
 
 #cottage {
-    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/cottage2.jpeg");
+    background-image: url("images/cottage2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -204,7 +204,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/tents.jpeg");
+    background-image: url("images/tents.jpeg");
 }
 
 .plan-pic {
