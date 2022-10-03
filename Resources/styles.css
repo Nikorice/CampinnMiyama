@@ -1,0 +1,310 @@
+
+html,
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+}
+
+/*Header*/
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(to top, rgba(78, 94, 69,.8), rgba(78, 94, 69,1));
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #cc883a;
+  }
+
+  header .content {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo {
+    flex: 1;
+    width: 8rem;
+    padding: 0.2rem;
+    padding-left: 1.5rem;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    padding-right: 2rem;
+    padding-top: 0.2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav li {
+    padding-left: 3rem;
+  }
+  
+  nav a {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  nav a:hover {
+    color: #cc883a;
+    font-size: 1.3rem;
+  }
+
+  #insta {
+    width: 1.5rem;
+    background-color: #cc883a;
+    border-radius: 50%;
+    border: 6px solid #cc883a;
+    box-shadow:  0 0 0 0px #89a194;
+    transition: 0.3s;
+  }
+
+  #insta:hover {
+    box-shadow:  0 0 0 10px #89a194;
+  }
+
+/* Banner */
+
+.slider {
+    margin-top: 4.9rem;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+    
+    
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .slides::-webkit-scrollbar-thumb {
+    background: #cc883a;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 40rem;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.slide-contents {
+    color: white;
+    text-align: center;
+    text-shadow: -4px 4px 0px #4b6043,
+                 -7px 7px 0px #89a194;
+}
+
+.slide-contents h1 {
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
+}
+
+.slide-contents h3 {
+    font-size: 2rem;
+}
+
+#slide-1 {
+    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/starrycamp.jpeg");
+}
+
+#slide-2 {
+    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/Camp.jpeg");
+}
+#slide-3 {
+    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/river.jpeg");
+}
+
+/* Pick Your Plan*/
+
+#plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#background {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    height: 10rem;
+}
+
+#background::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/camppattern.jpeg");
+    width: 100%;
+    height: 10rem;
+}
+#plan h1 {
+    position: relative;
+    font-size: 5rem;
+    font-family: "lobster", cursive;
+    color: white;
+    text-shadow: -4px 4px 0px #4b6043,
+    -7px 7px 0px #89a194;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    width: 75%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+#cottage {
+    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/cottage2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tents {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-image: url("/Users/niko/Desktop/Codeacademy/Flexbox Project/Resources/images/tents.jpeg");
+}
+
+.plan-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cottage-icon {
+    background-image: radial-gradient( transparent 0%, #cc883a 70%);
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+.cottage-icon:hover {
+    opacity: 1;
+}
+
+.tent-icon {
+    background-image: radial-gradient( transparent 0%, #4b6043 70%);
+    height: 100%;
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+.tent-icon:hover {
+    opacity: 1;
+}
+
+.image-container img {
+    width: 50%;
+    padding-top: 7rem;
+    filter: invert(100%);
+}
+
+/*about us*/
+
+#about {
+    background-image: linear-gradient(to top, rgb(201, 123, 50), rgba(78, 94, 69,0));
+}
+
+#about h1{
+    text-align: center;
+    font-size: 5rem;
+    font-family: "lobster", cursive;
+    color: white;
+    text-shadow: -4px 4px 0px #4b6043,
+    -7px 7px 0px #89a194;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+}
+
+#people-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 5rem;
+}
+
+.people-pics img {
+    border-radius: 50%;
+    height: 10rem;
+    border: 0.5rem solid #4b6043;
+}
+
+.even {
+    margin-bottom: 2rem;
+}
+
+.odd {
+    margin-top: 2rem;
+}
+
+.pic-contents {
+    text-align: center;
+    line-height: 0.1;
+}
+
+.pic-contents h3 {
+    font-size: 3rem;
+    color: white;
+    margin: 1rem;
+}
+
+.pic-contents h4 {
+    font-weight: 100;
+    margin: 1.5rem;
+}
+
+/* footer */
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #89a194;
+}
+
